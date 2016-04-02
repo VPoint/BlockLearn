@@ -1,8 +1,6 @@
 // Call on all URLS.
 alert("Hello from your Chrome extension!");
 
-var newScript=document.createElement('script');
-newScript.innerHtml = "
 var start = setInterval(myTimer, 3000);
 
 var length = 200;
@@ -37,9 +35,5 @@ div.style.top = "0px";
 
 body.appendChild(div);
 }
-";
-
-var head=document.getElementsByTagName('head')[0]...;
-head.appendChild(script);
 
 // 5 minutes = 300000 milliseconds
