@@ -33,7 +33,7 @@ div.style.position = "absolute";
 div.style.left = "0px";
 div.style.top = "0px";
 
-body.appendChild(div);
+document.body.appendChild(div);
 }
 
 // 5 minutes = 300000 milliseconds
