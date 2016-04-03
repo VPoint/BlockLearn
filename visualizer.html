@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BlockLearn</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+</head>
+<body onload="visual()">
+
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <div class = "w3-padding-32">
+  </div>
+  <div class="w3-center">
+  <h1 class="w3-xxxlarge w3-animate-bottom">BlockLearn</h1>
+    <div class="w3-padding-32">
+    <h4 > <a href="flashcards.html" style="text-decoration:none">Manage your cards</a></h4><br>
+    </div>
+  </div>
+</header>
+  
+   <!-- Navbar -->
+<ul class="w3-navbar w3-dark-grey w3-card-2 w3-top w3-left-align w3-large">
+  <li><a href="mainpage.html" class="w3-padding-large w3-white">Home</a></li>
+  <li class="w3-hide-small"><a href="flashcards.html" class="w3-padding-large w3-hover-white">Flashcards</a></li>
+  <li class="w3-hide-small"><a href="visualizer.html" class="w3-padding-large w3-hover-white">Visualizer</a></li>
+  <li class="w3-hide-small"><a href="settings.html" class="w3-padding-large w3-hover-white">Settings</a></li>
+</ul>
+
+<div class="w3-row-padding w3-center w3-margin-top">
+
+<div class="w3-col">
+  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+  <h4>Data Visualizer</h4><br>
+   <table id="timer" border="1"  style="width:90%">
+   
+  </div>
+</div>
+</div>
+<script>
+function visual() {
+      var ref = new Firebase("https://blocklearn.firebaseio.com/Users/user1/blockedList");
+       ref.once("value", function (snapshot) {
+        // The callback function will get called twice, once for "fred" and once for "barney"
+        snapshot.forEach(function(childSnapshot) {
+            // key will be "fred" the first time and "barney" the second time
+            var key = childSnapshot;
+            // childData will be the actual contents of the child
+            var childData= childSnapshot.val();
+            
+            var table = document.getElementById("timer");
+            var row = table.insertRow();
+            
+            // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            
+              // Add some text to the new cells:
+            cell1.innerHTML = childData.URL;
+            cell2.innerHTML = childData.time+" minutes";
+        });
+    });
+
+}
+</script>
+</body>
+</html>

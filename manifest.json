@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Block Learn Plugin",
+  "description": "This extension will force the user to answer flash card questions to access any sites on their blocked list.",
+  "version": "1.0",
+  "browser_action": {
+   "default_icon": "BL_icon.png",
+   "default_popup": "popup.html"
+  },
+"content_scripts": [
+  {
+    "matches": [
+      "http://*.facebook.com/*", "https://*.facebook.com/*", "http://*.twitter.com/*", "https://*.twitter.com/*", "http://*.youtube.com/*", "https://*.youtube.com/*", "http://*.reddit.com/*", "https://*.reddit.com/*", "http://*.buzzfeed.com/*", "https://*.buzzfeed.com/*",
+"http://*.engadget.com/*", "https://*.engadget.com/*"
+    ],
+    "js":["origin.js"]
+  }
+],
+  "permissions": [
+   "activeTab", "tabs", "http://*/*", "https://*/*"
+   ],
+  "background": {
+    "scripts": ["attempt.js"],
+    "persistent": false
+  }
+}
