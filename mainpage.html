@@ -1,149 +1,49 @@
 <!DOCTYPE html>
 <html>
-<title>BlockLearn</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<head>
+	<title>BlockLearn</title>
+	<meta name="BlockLearn Landing Page" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="generic.js"></script>
+	<link rel="stylesheet" href="template.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
 <body>
+	<span id = "container">
+		<header>
+			<h1 class="title animate-bottom">BlockLearn</h1>
+		</header>
 
+		<section>
+			<div id = 'login_temp'>
+				<form>
+					<h2>Login</h2>
+					<label>
+						<b>Username</b>
+					</label>
+					<input name="username" type="text">
+					<br></br>
+					<label>
+						<b>Password</b>
+					</label>
+					<input name="password" type="password">
+					<br></br>
+				</form>
+				<button onclick="window.location.href = 'mainpage.html'">Register</button>
+			</div>
+		</section>
+		
+		<footer>
+			<p id = "fine_print">Note: This extension was created as part of the HackPrinceton Hackathon and is in no way guaranteed to work as
+			expected or intended. This project is for fun and does not promise to make you a genious or even really smart.
+			There will be few updates and even fewer resources on what exactly was supposed to be happening, but feel free
+			to use this as an example or starting point for your own extension projects.</p>
+		</footer>
+	</span>
 <!-- Header -->
-<header class="w3-container w3-theme w3-padding" id="myHeader">
-  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-opennav"></i> 
-  <div class="w3-center">
-  <h1 class="w3-xxxlarge w3-animate-bottom">BlockLearn</h1>
-    <div class="w3-padding-32">
-    </div>
-  </div>
-</header>
-  
-  <!-- Navbar -->
-<ul class="w3-navbar w3-dark-grey w3-card-2 w3-top w3-left-align w3-large">
-  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-    <a class="w3-padding-large w3-hover-white w3-large w3-dark-grey" href="javascript:void(0);" onclick="myFunction()">☰</a>
-  </li>
-  <li><a href="mainpage.html" class="w3-padding-large w3-white">Home</a></li>
-  <li class="w3-hide-small"><a href="flashcards.html" class="w3-padding-large w3-hover-white">Flashcards</a></li>
-  <li class="w3-hide-small"><a href="visualizer.html" class="w3-padding-large w3-hover-white">Visualizer</a></li>
-  <li class="w3-hide-small"><a href="settings.html" class="w3-padding-large w3-hover-white">Settings</a></li>
-</ul>
 
-<!-- Navbar on small screens -->
-<div id="demo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:51px">
-  <ul class="w3-navbar w3-left-align w3-large w3-black">
-    <li><a class="w3-padding-large" href="flashcards.html">Flashcards</a></li>
-    <li><a class="w3-padding-large" href="users.html">User</a></li>
-    <li><a class="w3-padding-large" href="settings.html">Settings</a></li>
-  </ul>
-</div>
-
-
-<div class="w3-row-padding w3-center w3-margin-top">
-<div class="w3-third">
-  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-  <h4>Block</h4><br>
-  <i class="fa fa-ban w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Customize your block list</p>
-  <p>Waste less time</p>
-  </div>
-</div>
-
-<div class="w3-third">
-  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-  <h4>Learn</h4><br>
-  <i class="fa fa-book w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Easy-to-use flashcards</p>
-  <p>Share decks with other users</p>
-  </div>
-</div>
-
-<div class="w3-third">
-  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
-  <h4>Visualize</h4><br>
-  <i class="fa fa-line-chart w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>Visualize your time management</p>
-  <p>View detailed reports</p>
-  <p>Know your trends</p>
-  </div>
-</div>
-</div>
-
-
-
-<!-- Script for Sidenav, Tabs, Accordions, Progress bars and slideshows -->
-<script>
-// Side navigation
-function w3_open() {
-    document.getElementsByClassName("w3-sidenav")[0].style.width = "100%";
-    document.getElementsByClassName("w3-sidenav")[0].style.textAlign = "center";
-    document.getElementsByClassName("w3-sidenav")[0].style.fontSize = "50px";
-    document.getElementsByClassName("w3-sidenav")[0].style.paddingTop = "10%";
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
-}
-function w3_close() {
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
-}
-
-// Tabs
-function openCity(evt, cityName) {
-  var i;
-  var x = document.getElementsByClassName("city");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  var activebtn = document.getElementsByClassName("testbtn");
-  for (i = 0; i < x.length; i++) {
-     activebtn[i].classList.remove("w3-dark-grey");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.classList.add("w3-dark-grey");
-}
-
-var mybtn = document.getElementsByClassName("testbtn")[0];
-mybtn.click();
-
-// Accordions
-function myAccFunc(id) {
-    document.getElementById(id).classList.toggle("w3-show");
-    document.getElementById(id).previousElementSibling.classList.toggle("w3-dark-grey");
-}
-
-// Slideshows
-var slideIndex = 1;
-
-function plusDivs(n) {
-slideIndex = slideIndex + n;
-showDivs(slideIndex);
-}
-
-function showDivs(n) {
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-
-showDivs(1);
-
-// Progress Bars
-function move() {
-  var elem = document.getElementById("myBar");   
-  var width = 1;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width == 100) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-      document.getElementById("demoprgr").innerHTML = width * 1  + '%';
-    }
-  }
-}
-</script>
 
 </body>
 </html>
