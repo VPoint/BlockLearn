@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>BlockLearn</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+	<title>BlockLearn - Analytics</title>
+	<meta name="BlockLearn Landing Page" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="generic.js"></script>
+	<link rel="stylesheet" href="template.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 </head>
 <body onload="visual()">
 
 
 <!-- Header -->
-<header class="w3-container w3-theme w3-padding" id="myHeader">
-  <div class = "w3-padding-32">
-  </div>
-  <div class="w3-center">
-  <h1 class="w3-xxxlarge w3-animate-bottom">BlockLearn</h1>
-    <div class="w3-padding-32">
-    <h4 > <a href="flashcards.html" style="text-decoration:none">Manage your cards</a></h4><br>
-    </div>
-  </div>
-</header>
-  
-   <!-- Navbar -->
-<ul class="w3-navbar w3-dark-grey w3-card-2 w3-top w3-left-align w3-large">
-  <li><a href="mainpage.html" class="w3-padding-large w3-white">Home</a></li>
-  <li class="w3-hide-small"><a href="flashcards.html" class="w3-padding-large w3-hover-white">Flashcards</a></li>
-  <li class="w3-hide-small"><a href="visualizer.html" class="w3-padding-large w3-hover-white">Visualizer</a></li>
-  <li class="w3-hide-small"><a href="settings.html" class="w3-padding-large w3-hover-white">Settings</a></li>
-</ul>
+		<header>
+			<h1 class="animate-bottom">BlockLearn</h1>
+			
+			<!-- Navbar -->
+			<ul class="topnav">
+				  <li><a href="mainpage.html">Home</a></li>
+				  <li><a href="flashcards.html">Flashcards</a></li>
+				  <li><a href="analytics.html">Analytics</a></li>
+				  <li><a href="settings.html">Settings</a></li>
+				  <li class="icon"><a href="javascript:void(0);" onclick="getNav()">&#9776;</a>
+				</li>
+			</ul>
+		</header>
 
 <div class="w3-row-padding w3-center w3-margin-top">
 

@@ -56,15 +56,7 @@ function move() {
   }
 }
 
-// Side navigation
-function w3_open() {
-    document.getElementsByClassName("w3-sidenav")[0].style.width = "100%";
-    document.getElementsByClassName("w3-sidenav")[0].style.textAlign = "center";
-    document.getElementsByClassName("w3-sidenav")[0].style.fontSize = "50px";
-    document.getElementsByClassName("w3-sidenav")[0].style.paddingTop = "10%";
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function getNav() {
+    document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
 }
-function w3_close() {
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
-}
-

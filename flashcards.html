@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-<title>BlockLearn</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-
-  
-  <head>
+<head>
+	<title>BlockLearn - Flashcards</title>
+	<meta name="BlockLearn Landing Page" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="generic.js"></script>
+	<link rel="stylesheet" href="template.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+</head>
 <style> 
 input[type=text] {
     width: 250px;
@@ -40,12 +41,17 @@ input[type=text]:focus {
   
 <!-- Header and search bar -->
 <header class="w3-container w3-theme w3-padding" id="myHeader">
-  
-  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-opennav"></i> 
-  <div class="w3-center">
-	<div class = w3-padding-32> </div>
-  <h1 class="w3-xxxlarge w3-animate-bottom">BlockLearn</h1>
-    <div class="w3-padding-32">
+			<h1 class="animate-bottom">BlockLearn</h1>
+			
+			<!-- Navbar -->
+			<ul class="topnav">
+				  <li><a href="mainpage.html">Home</a></li>
+				  <li><a href="flashcards.html">Flashcards</a></li>
+				  <li><a href="analytics.html">Analytics</a></li>
+				  <li><a href="settings.html">Settings</a></li>
+				  <li class="icon"><a href="javascript:void(0);" onclick="getNav()">&#9776;</a>
+				</li>
+			</ul>
       
 <form>
   <input type="text" name="search" placeholder="Search for a deck">
