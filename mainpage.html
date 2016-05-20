@@ -13,25 +13,50 @@
 <body>
 	<span id = "container">
 		<header>
-			<h1 class="title animate-bottom">BlockLearn</h1>
+			<i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-opennav"></i> 
+			<h1 class="animate-bottom">BlockLearn</h1>
 		</header>
 
 		<section>
-			<div id = 'login_temp'>
-				<form>
-					<h2>Login</h2>
-					<label>
-						<b>Username</b>
-					</label>
-					<input name="username" type="text">
-					<br></br>
-					<label>
-						<b>Password</b>
-					</label>
-					<input name="password" type="password">
-					<br></br>
-				</form>
-				<button onclick="window.location.href = 'mainpage.html'">Register</button>
+
+			<!-- Navbar on small screens -->
+			<div id="demo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:51px">
+			  <ul class="w3-navbar w3-left-align w3-large w3-black">
+				<li><a class="w3-padding-large" href="flashcards.html">Flashcards</a></li>
+				<li><a class="w3-padding-large" href="users.html">User</a></li>
+				<li><a class="w3-padding-large" href="settings.html">Settings</a></li>
+			  </ul>
+			</div>
+
+
+			<div class="w3-row-padding w3-center w3-margin-top">
+			<div class="w3-third">
+			  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+			  <h4>Block</h4><br>
+			  <i class="fa fa-ban w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+			  <p>Customize your block list</p>
+			  <p>Waste less time</p>
+			  </div>
+			</div>
+
+			<div class="w3-third">
+			  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+			  <h4>Learn</h4><br>
+			  <i class="fa fa-book w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+			  <p>Easy-to-use flashcards</p>
+			  <p>Share decks with other users</p>
+			  </div>
+			</div>
+
+			<div class="w3-third">
+			  <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+			  <h4>Visualize</h4><br>
+			  <i class="fa fa-line-chart w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+			  <p>Visualize your time management</p>
+			  <p>View detailed reports</p>
+			  <p>Know your trends</p>
+			  </div>
+			</div>
 			</div>
 		</section>
 		
@@ -42,9 +67,6 @@
 			to use this as an example or starting point for your own extension projects.</p>
 		</footer>
 	</span>
-<!-- Header -->
-
-
 </body>
 </html>
                                                         
