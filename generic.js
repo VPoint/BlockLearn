@@ -60,3 +60,11 @@ function move() {
 function getNav() {
     document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
 }
+
+/*Dynamically change the padding at the bottom of the section*/
+function changePad(){
+	var h = document.getElementById("fine_print");
+	document.getElementsByTagName('section')[0].style.paddingBottom = (h.clientHeight + 10)+"px";
+}
+
+window.onresize = changePad;
